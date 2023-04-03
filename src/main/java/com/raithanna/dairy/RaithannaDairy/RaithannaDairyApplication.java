@@ -21,16 +21,14 @@ import java.util.Optional;
 @RestController
 @Controller
 public class RaithannaDairyApplication {
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+    @Autowired
+    private ProductMasterRepository productMasterRepository;
 
-	@Autowired
-	private ProductMasterRepository productMasterRepository;
-
-	public static void main(String[] args) {
-
-		ConfigurableApplicationContext context =
-				SpringApplication.run(RaithannaDairyApplication.class, args);
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context =
+                SpringApplication.run(RaithannaDairyApplication.class, args);
 		/*DailySalesRepository repository = context.getBean(DailySalesRepository.class);
 		List<dailySales> findByOrderNo =repository.findByOrderNo(58);
 		if(findByOrderNo.) {
@@ -38,8 +36,7 @@ public class RaithannaDairyApplication {
 			System.out.println(repository);
 		}*/
 
-	}
-
+    }
 //	@PostMapping("/productsmigrate")
 //	public List<Map<String,Object>> productMigrate(@RequestBody Map productsMap) throws ParseException {
 //		 System.out.println(productsMap.get("item"));
@@ -52,7 +49,4 @@ public class RaithannaDairyApplication {
 //		 }
 //		 return products;
 //	}
-
-
-
 }
